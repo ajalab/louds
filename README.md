@@ -1,5 +1,8 @@
 # LOUDS
 
+[![Crates.io](https://img.shields.io/crates/v/louds.svg)](https://crates.io/crates/louds)
+[![docs.rs](https://docs.rs/louds/badge.svg)](https://docs.rs/louds)
+
 This crate provides a succinct data structure called LOUDS (level order unary degree sequence). LOUDS represents an ordered tree structure and supports almost constant-time tree traversal operations.
 
 In LOUDS, a tree structure containing n nodes is repsresented as
