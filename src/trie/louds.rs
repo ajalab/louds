@@ -2,6 +2,27 @@ use fid::BitArray;
 use trie::{Trie, TrieVec};
 use Louds;
 
+/// Trie implementation with LOUDS tree.
+///
+/// This structure does not support insertion queries, so you first have to
+/// create `TrieVec`, which supports dynamic insertion,
+/// and then convert it to `TrieLouds` by using `TrieLouds::from()`.
+///
+/// # Examples
+///
+/// ```
+/// let mut t = TrieVec::new();
+/// let keys = &["ax", "ays", "ayt", "azz", "ceg", "cf"];
+/// for key in keys {
+///     t.insert(key);
+/// }
+///
+/// // Convert
+/// let t = TrieLouds::from(t);
+/// assert!(t.has("ax"));
+/// assert!(t.has("ays"));
+/// assert!(!t.has("c"));
+/// ```
 pub struct TrieLouds<T> {
     louds: Louds,
     labels: Vec<T>,

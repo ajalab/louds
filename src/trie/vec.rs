@@ -1,6 +1,7 @@
 use std::collections::VecDeque;
 use trie::Trie;
 
+/// Naive trie implementation supporting dynamic insertion.
 #[derive(Debug)]
 pub struct TrieVec<T> {
     children: Vec<(T, Box<TrieVec<T>>)>,
