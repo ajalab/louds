@@ -9,6 +9,7 @@ homepage = "https://github.com/ajalab/louds"
 documentation = "https://docs.rs/louds"
 license = "MIT"
 keywords = ["LOUDS", "tree", "succinct", "trie"]
+categories = ["data-structures"]
 
 [dependencies]
 fid = "0.1.2"
