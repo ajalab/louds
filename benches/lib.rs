@@ -65,9 +65,12 @@ fn first_child_100000000_wide(b: &mut Bencher) {
 fn bench_first_child(n: usize, m: usize, b: &mut Bencher) {
     let louds = generate_tree(n, m);
     let mut rng: StdRng = SeedableRng::from_seed([0; 32]);
+    let indices = (0..TRIALS)
+        .map(|_| rng.gen_range(0, n))
+        .collect::<Vec<usize>>();
     b.iter(|| {
-        for _ in 0..TRIALS {
-            louds.first_child(rng.gen_range(0, n));
+        for i in &indices {
+            louds.first_child(*i);
         }
     })
 }
