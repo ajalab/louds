@@ -41,7 +41,7 @@
 //! assert_eq!(louds.last_child(2), Some(7));
 //! assert_eq!(louds.last_child(7), None);
 //! assert_eq!(louds.child(1, 1), Some(4));
-//! assert_eq!(louds.parent(4), 1);
+//! assert_eq!(louds.parent(4), Some(1));
 //! assert_eq!(louds.sibling(4), Some(5));
 //! assert_eq!(louds.degree(4), 2);
 //!

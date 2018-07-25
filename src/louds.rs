@@ -101,14 +101,12 @@ impl Louds {
     }
 
     /// Returns the parent of the i-th node.
-    ///
-    /// Returns zero if `i == 0` (root node).
-    pub fn parent(&self, i: usize) -> usize {
+    pub fn parent(&self, i: usize) -> Option<usize> {
         if i > 0 {
             let p = self.0.select1(i as u64);
-            self.0.rank0(p) as usize - 1
+            Some(self.0.rank0(p) as usize - 1)
         } else {
-            0
+            None
         }
     }
 
@@ -177,7 +175,20 @@ mod tests {
 
     const DEPTH_LIGHT: &[usize] = &[0, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3];
 
-    const PARENTS_LIGHT: &[usize] = &[0, 0, 0, 1, 1, 1, 2, 2, 4, 4, 5, 6];
+    const PARENTS_LIGHT: &[Option<usize>] = &[
+        None,
+        Some(0),
+        Some(0),
+        Some(1),
+        Some(1),
+        Some(1),
+        Some(2),
+        Some(2),
+        Some(4),
+        Some(4),
+        Some(5),
+        Some(6),
+    ];
 
     fn get_tree_light() -> Louds {
         let mut louds = Louds::new();
