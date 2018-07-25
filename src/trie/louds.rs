@@ -11,6 +11,9 @@ use Louds;
 /// # Examples
 ///
 /// ```
+/// extern crate louds;
+/// use louds::trie::{TrieVec, TrieLouds, Trie};
+///
 /// let mut t = TrieVec::new();
 /// let keys = &["ax", "ays", "ayt", "azz", "ceg", "cf"];
 /// for key in keys {
