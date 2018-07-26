@@ -24,6 +24,10 @@ impl Louds {
         self.0.push(b);
     }
 
+    pub fn size(&self) -> usize {
+        self.0.size()
+    }
+
     /// Returns the first child of the i-th node in breadth-first order.
     pub fn first_child(&self, i: usize) -> Option<usize> {
         let first_child_pos = self.0.select0(i as u64) + 1;
