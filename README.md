@@ -17,7 +17,7 @@ Add this to your `Cargo.toml`.
 
 ```toml
 [dependencies]
-louds = "0.1.0"
+louds = "0.1.1"
 ```
 
 ## Examples
