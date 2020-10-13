@@ -1,5 +1,7 @@
 use fid::{BitVector, FID};
+use serde::{Serialize, Deserialize};
 
+#[derive(Debug, Clone, Default, Deserialize, Serialize, PartialEq)]
 pub struct Louds(BitVector);
 
 impl Louds {

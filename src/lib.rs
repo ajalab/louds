@@ -51,6 +51,7 @@
 //! ```
 
 extern crate fid;
+extern crate serde;
 
 mod louds;
 pub mod trie;
