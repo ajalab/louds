@@ -1,5 +1,8 @@
 # LOUDS
 
+>[!CAUTION]
+> This project is no longer maintained.
+
 [![Crates.io](https://img.shields.io/crates/v/louds.svg)](https://crates.io/crates/louds)
 [![docs.rs](https://docs.rs/louds/badge.svg)](https://docs.rs/louds)
 
